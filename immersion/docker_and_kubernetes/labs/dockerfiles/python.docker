@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
  python3-dev \
  python3-pip \
  python3-virtualenv
+ 
 RUN python3 -V
 
 ENV PYSPARK_DRIVER_PYTHON python3
