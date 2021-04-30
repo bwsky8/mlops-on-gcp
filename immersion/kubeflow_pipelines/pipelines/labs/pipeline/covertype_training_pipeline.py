@@ -89,7 +89,6 @@ def generate_sampling_query(source_table_name, num_lots, lots):
 component_store = kfp.components.ComponentStore(
     local_search_paths=None, url_search_prefixes=[COMPONENT_URL_SEARCH_PREFIX])
 
-
 bigquery_query_op = component_store.load_component('bigquery/query')
 mlengine_train_op = component_store.load_component('ml_engine/train')
 mlengine_deploy_op = component_store.load_component('ml_engine/deploy')
@@ -157,7 +156,6 @@ def covertype_train(project_id,
         table_id='',
         output_gcs_path=testing_file_path,
         dataset_location=dataset_location)
-
 
     # Tune hyperparameters
     tune_args = [
